@@ -56,6 +56,7 @@ retry:;
   switch (font->type()) {
 
     case FontType::Unknown:
+    case FontType::Native:
       // Do nothing
       break;
 
@@ -219,7 +220,6 @@ retry:;
             }
           }
         }
-
         if (!origDstBounds.w) origDstBounds.w = 1;
         if (!origDstBounds.h) origDstBounds.h = 1;
         textBounds |= origDstBounds;
